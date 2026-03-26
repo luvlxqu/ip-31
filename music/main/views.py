@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Genre, Track
-from .forms import GenreForm, TrackForm
+from .models import Genre, Track, Artist
+from .forms import GenreForm, TrackForm, ArtistForm
 
 def index (request):
     return render(request, 'index.html')
@@ -69,4 +69,8 @@ def delete_track(request, id_track):
     track = Track.objects.get(id=id_track)
     track.delete()
     return redirect('/tracks')
+
+def artists(request):
+    a = Artist.objects.all()
+    return render(request, 'artists.html', {'artists':a})
 
