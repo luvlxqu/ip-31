@@ -9,3 +9,10 @@
 - Скорость
 - Надежность
 - Удобство
+## Установка
+
+1. Скачайте репозиторий: git clone __ССЫЛКА__
+2. Создайте виртуальную среду python -m venv env
+3. Активируйте env/Scripts/activate
+4. Установите зависимости: pip install django pillow.
+5. Запустите сервер: python manage.py runserver
